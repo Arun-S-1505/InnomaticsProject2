@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Match Game</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+  <div class="game-container">
+    <!-- Landing Page -->
+    <div id="landing-page">
+      <h1>Memory Match Game</h1>
+      <p>Test your memory by matching pairs of cards!</p>
+      <div class="category-selection">
+        <h2>Select a Category</h2>
+        <div class="category-buttons">
+          <button class="category-btn" data-category="fruits">Fruits</button>
+          <button class="category-btn" data-category="emojis">Emojis</button>
+          <button class="category-btn" data-category="animals">Animals</button>
+          <button class="category-btn" data-category="planets">Planets</button>
+          <button class="category-btn" data-category="flags">Flags</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game Board -->
+    <div id="game-board" class="hidden">
+      <div class="game-header">
+        <div class="game-info">
+          <div class="score-container">
+            <span>Score: </span>
+            <span id="score">0</span>
+          </div>
+          <div class="timer-container">
+            <span>Time: </span>
+            <span id="timer">60</span>
+          </div>
+        </div>
+        <div class="game-controls">
+          <button id="restart-btn">Restart</button>
+          <button id="home-btn">Home</button>
+        </div>
+      </div>
+      
+      <div id="cards-container" class="cards-grid"></div>
+      
+      <div id="game-message" class="hidden">
+        <div class="message-content">
+          <h2 id="message-title">Game Over</h2>
+          <p id="message-text">Your score: 0</p>
+          <button id="play-again-btn">Play Again</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
